@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.forrestsu.logintest"
+    android:versionCode="1"
+    android:versionName="V1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="28" />
+
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 获取访问SD卡权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 网络定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- GPS定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 访问wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 改变wifi状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name="com.example.forrestsu.logintest.MyApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="hOzue0ij6g0DUC5Dh4gR53Q96nGwR3w2" />
+
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.RegisterActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.LoginActivity"
+            android:theme="@style/ColorTranslucentTheme" >
+            <intent-filter>
+
+                <!-- Deep Link -->
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.MainActivity"
+            android:theme="@style/ColorTranslucentTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.ResetPasswordActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.VerifyIdentityActivity"
+            android:label="@string/upload_identity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.MyPostActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.MyInfoActivity"
+            android:theme="@style/ColorTranslucentTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.SettingActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.FeedBackActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.AboutActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name="com.example.forrestsu.logintest.wxapi.WXEntryActivity"
+            android:exported="true" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.forrestsu.logintest.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.WorkerPostActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity android:name="com.example.forrestsu.logintest.activity.TestActivity" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.EmployerPostActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.WorkerPageActivity"
+            android:theme="@style/ColorTranslucentTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.EmployerPageActivity"
+            android:theme="@style/ColorTranslucentTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.forrestsu.logintest.activity.MapModeActivity"
+            android:theme="@style/ColorTranslucentTheme"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.example.forrestsu.logintest.service.DownloadService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+    </application>
+
+</manifest>

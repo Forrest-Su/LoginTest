@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <View
+        android:id="@+id/view_situation"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/view_age"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/level"
+        android:textColor="@color/grey_bababa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_situation"
+        app:layout_constraintEnd_toEndOf="@+id/view_situation"
+        app:layout_constraintStart_toStartOf="@+id/view_situation"
+        app:layout_constraintTop_toTopOf="@+id/view_situation" />
+
+    <ImageView
+        android:id="@+id/iv_level"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_situation"
+        app:layout_constraintEnd_toEndOf="@+id/view_situation"
+        app:layout_constraintTop_toTopOf="@+id/view_situation"
+        app:srcCompat="@drawable/keyboard_down_grey" />
+
+    <View
+        android:id="@+id/view_line_1"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintBottom_toBottomOf="@+id/view_age"
+        app:layout_constraintStart_toStartOf="@+id/view_age"
+        app:layout_constraintTop_toTopOf="@+id/view_age" />
+
+    <View
+        android:id="@+id/view_age"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/workerAge"
+        android:textColor="@color/grey_bababa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_age"
+        app:layout_constraintEnd_toEndOf="@+id/view_age"
+        app:layout_constraintStart_toStartOf="@+id/view_age"
+        app:layout_constraintTop_toTopOf="@+id/view_age" />
+
+    <ImageView
+        android:id="@+id/iv_age"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_age"
+        app:layout_constraintEnd_toEndOf="@+id/view_age"
+        app:layout_constraintTop_toTopOf="@+id/view_age"
+        app:srcCompat="@drawable/keyboard_down_grey" />
+
+    <View
+        android:id="@+id/view_line_2"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintBottom_toBottomOf="@+id/view_distance"
+        app:layout_constraintStart_toStartOf="@+id/view_distance"
+        app:layout_constraintTop_toTopOf="@+id/view_distance" />
+
+    <View
+        android:id="@+id/view_distance"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/workerDistance"
+        android:textColor="@color/grey_bababa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_distance"
+        app:layout_constraintEnd_toEndOf="@+id/view_distance"
+        app:layout_constraintStart_toStartOf="@+id/view_distance"
+        app:layout_constraintTop_toTopOf="@+id/view_distance" />
+
+    <ImageView
+        android:id="@+id/iv_distance"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_distance"
+        app:layout_constraintEnd_toEndOf="@+id/view_distance"
+        app:layout_constraintTop_toTopOf="@+id/view_distance"
+        app:srcCompat="@drawable/keyboard_down_grey" />
+
+    <View
+        android:id="@+id/view_line_3"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintBottom_toBottomOf="@+id/view_location"
+        app:layout_constraintStart_toStartOf="@+id/view_location"
+        app:layout_constraintTop_toTopOf="@+id/view_location" />
+
+    <View
+        android:id="@+id/view_location"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toEndOf="@+id/view_distance"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/location"
+        android:textColor="@color/grey_bababa"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_location"
+        app:layout_constraintEnd_toEndOf="@+id/view_location"
+        app:layout_constraintStart_toStartOf="@+id/view_location"
+        app:layout_constraintTop_toTopOf="@+id/view_location" />
+
+    <ImageView
+        android:id="@+id/iv_location"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_location"
+        app:layout_constraintEnd_toEndOf="@+id/view_location"
+        app:layout_constraintTop_toTopOf="@+id/view_location"
+        app:srcCompat="@drawable/keyboard_down_grey" />
+
+    <View
+        android:id="@+id/view_line3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_situation" />
+
+    <!--containerFL内容层开始-->
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line3">
+
+        <!--SwipeRefreshLayout开始-->
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl_findworker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="157dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_worker"
+                android:layout_width="match_parent"                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <!--SwipeRefreshLayout结束-->
+
+        <!--glassView开始-->
+        <View
+            android:id="@+id/view_glass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/glass"
+            android:clickable="true" />
+
+        <!--子菜单列表开始-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_subMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_ffffff" />
+
+    </FrameLayout>
+    <!--containerFL内容层结束-->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!--悬浮按钮-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:backgroundTint="@color/blue_5fc0cd"
+        app:rippleColor="@color/blue_51A8B4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/round_create_white_24dp"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white_eff0f4">
+
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/authentication"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/white_ffffff"
+        android:background="@color/blue_5fc0cd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_show_identity_1"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/white_ffffff"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/iv_show_identity_2"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white_ffffff"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_show_identity_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/iv_show_identity_1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_notice_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notice_identity_1"
+        android:textColor="@color/grey_bababa"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_show_identity_1"
+        app:layout_constraintEnd_toEndOf="@+id/iv_show_identity_1"
+        app:layout_constraintStart_toStartOf="@+id/iv_show_identity_1"
+        app:layout_constraintTop_toTopOf="@+id/iv_show_identity_1" />
+
+    <TextView
+        android:id="@+id/tv_notice_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notice_identity_2"
+        android:textColor="@color/grey_bababa"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_show_identity_2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_show_identity_2"
+        app:layout_constraintStart_toStartOf="@+id/iv_show_identity_2"
+        app:layout_constraintTop_toTopOf="@+id/iv_show_identity_2" />
+
+    <Button
+        android:id="@+id/bt_verify"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/blue_5fc0cd"
+        android:text="开始验证"
+        android:textColor="@color/white_ffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pb_verify" />
+
+    <EditText
+        android:id="@+id/et_true_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white_ffffff"
+        android:gravity="center_vertical"
+        android:hint="@string/et_truename_hint"
+        android:paddingStart="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_verify" />
+
+    <EditText
+        android:id="@+id/et_identity_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white_ffffff"
+        android:gravity="center_vertical"
+        android:hint="@string/et_identitynumber_hint"
+        android:textSize="14sp"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_true_name" />
+
+    <ProgressBar
+        android:id="@+id/pb_verify"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_show_identity_1" />
+
+
+</android.support.constraint.ConstraintLayout>

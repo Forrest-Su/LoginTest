@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\AndroidProjects\\LoginTest\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "D:\\AndroidProjects\\LoginTest\\app\\src\\main\\res\\values-v19\\styles.xml",
+                    "from": {
+                        "startLines": "7,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "287,55",
+                        "endLines": "10,5",
+                        "endColumns": "12,12",
+                        "endOffsets": "513,281"
+                    },
+                    "to": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,286",
+                        "endLines": "5,9",
+                        "endColumns": "12,12",
+                        "endOffsets": "281,512"
+                    }
+                }
+            ]
+        }
+    ]
+}

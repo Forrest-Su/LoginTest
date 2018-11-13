@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="240dp" >
+
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/grey_bababa"/>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textColor="@color/white_ffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_top"
+        app:layout_constraintStart_toStartOf="@+id/view_top"
+        app:layout_constraintTop_toTopOf="@+id/view_top" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/white_ffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_top"
+        app:layout_constraintEnd_toEndOf="@+id/view_top"
+        app:layout_constraintTop_toTopOf="@+id/view_top" />
+
+    <NumberPicker
+        android:id="@+id/np_hour"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_hour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_top" />
+
+    <TextView
+        android:id="@+id/tv_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="@string/hour"
+        android:textColor="@color/black_000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/view_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/np_hour"
+        app:layout_constraintEnd_toStartOf="@+id/np_minute"/>
+
+    <NumberPicker
+        android:id="@+id/np_minute"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/view_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_hour"
+        app:layout_constraintEnd_toStartOf="@+id/tv_minute" />
+
+
+    <TextView
+        android:id="@+id/tv_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="@string/minute"
+        android:textColor="@color/black_000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/view_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/np_minute"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

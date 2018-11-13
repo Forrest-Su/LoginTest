@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_head"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/ic_default_head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+    <!--依据《姓名登记条例》第十四条 除依照第六条或者第十一条的规定使用民族文字或者书写、译写汉字的以外，姓名用字应当
+    在二个汉字以上，六个汉字以下。 民族自治地方的自治机关或者民族良俗对姓名的字数有规定或约定的，从其规定和约定。-->
+    <TextView
+        android:id="@+id/tv_workerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black_000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:maxLength="6"
+        android:singleLine="true"
+        app:layout_constraintStart_toEndOf="@+id/civ_head"
+        app:layout_constraintTop_toTopOf="@+id/civ_head" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/civ_head"
+        app:layout_constraintStart_toStartOf="@+id/tv_workerName"
+        app:srcCompat="@drawable/room_filled" />
+
+    <TextView
+        android:id="@+id/tv_workerAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/iv_workerLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_workerName"
+        app:layout_constraintStart_toEndOf="@+id/tv_workerName" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/grey_bababa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

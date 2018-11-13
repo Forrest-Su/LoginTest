@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<TextView
+    android:id="@+id/tv_title"
+    android:layout_width="wrap_content"
+    android:layout_height="42dp"
+    android:gravity="center_vertical|start"
+    android:textColor="@color/grey_bababa"
+    android:textSize="16sp"
+    android:text="dbhfb"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+<TextView
+    android:id="@+id/tv_1"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginStart="100dp"
+    android:gravity="center"
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/tv_2"
+    app:layout_constraintTop_toTopOf="@+id/tv_title"
+    app:layout_constraintBottom_toBottomOf="@+id/tv_title"/>
+
+<TextView
+    android:id="@+id/tv_2"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:gravity="center"
+    android:textSize="16sp"
+    app:layout_constraintStart_toEndOf="@+id/tv_1"
+    app:layout_constraintEnd_toStartOf="@+id/tv_3"
+    app:layout_constraintTop_toTopOf="@+id/tv_title"
+    app:layout_constraintBottom_toBottomOf="@+id/tv_title"/>
+
+<TextView
+    android:id="@+id/tv_3"
+    android:layout_width="0dp"
+    android:layout_height="42dp"
+    android:layout_marginEnd="12dp"
+    android:gravity="center"
+    android:textSize="16sp"
+    app:layout_constraintStart_toEndOf="@+id/tv_2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/tv_title"
+    app:layout_constraintBottom_toBottomOf="@+id/tv_title"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

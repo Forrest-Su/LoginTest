@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_ffffff"
+    android:fitsSystemWindows="true">
+
+    <!--0层，内容-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/et_share_text"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black_000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/bt_share_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bt_share_text"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/share_black_24dp"
+            app:layout_constraintStart_toEndOf="@+id/et_share_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_share_text"
+            app:layout_constraintBottom_toBottomOf="@+id/et_share_text"/>
+        <View
+            android:id="@+id/view_line_0"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_share_text"/>
+
+        <ImageView
+            android:id="@+id/iv_share_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toStartOf="@+id/bt_share_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_0"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+        <Button
+            android:id="@+id/bt_share_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/share_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_share_image"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_share_image"/>
+
+        <View
+            android:id="@+id/view_line_1"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_share_image"/>
+
+        <EditText
+            android:id="@+id/et_share_music"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black_000000"
+            android:textSize="16sp"
+            android:maxLines="3"
+            app:layout_constraintEnd_toStartOf="@+id/bt_share_music"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_1" />
+
+        <Button
+            android:id="@+id/bt_share_music"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/share_black_24dp"
+            app:layout_constraintStart_toEndOf="@+id/et_share_music"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_share_music"
+            app:layout_constraintBottom_toBottomOf="@+id/et_share_music"/>
+
+        <View
+            android:id="@+id/view_line_2"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_share_music"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!--1层，透明-->
+    <View
+        android:id="@+id/view_glass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/glass" />
+
+    <!--2层，分享-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_share"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white_ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/share"
+            android:textColor="@color/black_000000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cl_share" />
+
+        <ImageView
+            android:id="@+id/iv_circle_friends"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/cl_share"
+            app:layout_constraintTop_toBottomOf="@+id/tv_share"
+            app:srcCompat="@drawable/icon_res_download_moments" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/circle_friends"
+            android:textColor="@color/black_000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_circle_friends"
+            app:layout_constraintStart_toStartOf="@+id/iv_circle_friends"
+            app:layout_constraintTop_toBottomOf="@+id/iv_circle_friends" />
+
+        <ImageView
+            android:id="@+id/iv_wecaht"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="70dp"
+            app:layout_constraintEnd_toEndOf="@+id/cl_share"
+            app:layout_constraintTop_toBottomOf="@+id/tv_share"
+            app:srcCompat="@drawable/icon64_wx_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wechat"
+            android:textColor="@color/black_000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_wecaht"
+            app:layout_constraintStart_toStartOf="@+id/iv_wecaht"
+            app:layout_constraintTop_toBottomOf="@+id/iv_wecaht" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

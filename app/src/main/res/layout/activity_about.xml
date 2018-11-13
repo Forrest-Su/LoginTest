@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white_eff0f4"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:background="@color/blue_5fc0cd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/me_about"
+        android:textColor="@color/white_ffffff"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/view_top"
+        app:layout_constraintEnd_toEndOf="@+id/view_top"
+        app:layout_constraintTop_toTopOf="@+id/view_top"
+        app:layout_constraintBottom_toBottomOf="@+id/view_top"/>
+
+    <ImageView
+        android:id="@+id/ico"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_top"
+        app:srcCompat="@drawable/find_worker_ico" />
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="0dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_about"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ico" />
+
+    <!--版权所有-->
+    <View
+        android:id="@+id/view_copyright"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="@+id/view_bg"
+        app:layout_constraintEnd_toEndOf="@+id/view_bg"
+        app:layout_constraintTop_toTopOf="@+id/view_bg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:gravity="center_vertical"
+        android:text="@string/copyright"
+        android:textColor="@color/black_000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/view_copyright"
+        app:layout_constraintTop_toTopOf="@+id/view_copyright"
+        app:layout_constraintBottom_toBottomOf="@+id/view_copyright" />
+
+        <View
+            android:id="@+id/view_line_1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintStart_toStartOf="@+id/view_bg"
+            app:layout_constraintEnd_toEndOf="@+id/view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/view_copyright"/>
+
+    <!--技术支持-->
+    <View
+        android:id="@+id/view_technical"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="@+id/view_bg"
+        app:layout_constraintEnd_toEndOf="@+id/view_bg"
+        app:layout_constraintTop_toBottomOf="@+id/view_line_1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:gravity="center_vertical"
+        android:text="@string/technical"
+        android:textColor="@color/black_000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/view_technical"
+        app:layout_constraintTop_toTopOf="@+id/view_technical"
+        app:layout_constraintBottom_toBottomOf="@+id/view_technical" />
+
+    <View
+        android:id="@+id/view_line_2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintStart_toStartOf="@+id/view_bg"
+        app:layout_constraintEnd_toEndOf="@+id/view_bg"
+        app:layout_constraintTop_toBottomOf="@+id/view_technical"/>
+
+    <!--版本更新-->
+    <View
+        android:id="@+id/view_version"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="@+id/view_bg"
+        app:layout_constraintEnd_toEndOf="@+id/view_bg"
+        app:layout_constraintTop_toBottomOf="@+id/view_line_2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:gravity="center_vertical"
+        android:text="@string/version"
+        android:textColor="@color/black_000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/view_version"
+        app:layout_constraintTop_toTopOf="@+id/view_version"
+        app:layout_constraintBottom_toBottomOf="@+id/view_version" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/grey_bababa"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/view_version"
+        app:layout_constraintTop_toTopOf="@+id/view_version"
+        app:layout_constraintBottom_toBottomOf="@+id/view_version" />
+
+</android.support.constraint.ConstraintLayout>

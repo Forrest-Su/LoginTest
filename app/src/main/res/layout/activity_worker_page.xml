@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:twoTextViews="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.WorkerPageActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <View
+            android:id="@+id/view_top"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/blue_5fc0cd"
+            app:layout_constraintEnd_toEndOf="@+id/cl_container"
+            app:layout_constraintStart_toStartOf="@+id/cl_container"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_home_page"
+            android:textColor="@color/white_ffffff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_top"
+            app:layout_constraintEnd_toEndOf="@+id/view_top"
+            app:layout_constraintStart_toStartOf="@+id/view_top"
+            app:layout_constraintTop_toTopOf="@+id/view_top" />
+
+        <ImageView
+            android:id="@+id/iv_photo_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_top"
+            app:srcCompat="@drawable/bg_me_info" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_photo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_head"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_photo_bg"
+            app:layout_constraintStart_toStartOf="@+id/iv_photo_bg"
+            app:layout_constraintTop_toTopOf="@+id/iv_photo_bg" />
+
+        <TextView
+            android:id="@+id/tv_show_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/white_ffffff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/view_line_0"
+            app:layout_constraintStart_toEndOf="@+id/civ_photo" />
+
+        <TextView
+            android:id="@+id/tv_show_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/white_ffffff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_show_name"
+            app:layout_constraintStart_toEndOf="@+id/tv_show_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_show_name" />
+
+        <View
+            android:id="@+id/view_line_0"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_photo_bg"
+            app:layout_constraintTop_toTopOf="@+id/iv_photo_bg" />
+
+        <ImageView
+            android:id="@+id/iv_map_ico"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_show_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_show_address"
+            app:srcCompat="@drawable/room_filled" />
+
+        <TextView
+            android:id="@+id/tv_show_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:maxLines="3"
+            android:textColor="@color/white_ffffff"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_map_ico"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_0" />
+
+        <ImageView
+            android:id="@+id/iv_star_ico_1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_show_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_show_1"
+            app:srcCompat="@drawable/star_red" />
+
+        <TextView
+            android:id="@+id/tv_show_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/view_line_1"
+            app:layout_constraintStart_toEndOf="@+id/iv_star_ico_1"
+            app:layout_constraintTop_toBottomOf="@+id/iv_photo_bg" />
+
+        <ImageView
+            android:id="@+id/iv_star_ico_2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_show_2"
+            app:layout_constraintStart_toEndOf="@id/tv_show_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_show_2"
+            app:srcCompat="@drawable/star_red" />
+
+        <TextView
+            android:id="@+id/tv_show_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_show_1"
+            app:layout_constraintStart_toEndOf="@+id/iv_star_ico_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_show_1" />
+
+        <ImageView
+            android:id="@+id/iv_star_ico_3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_show_3"
+            app:layout_constraintStart_toEndOf="@id/tv_show_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_show_3"
+            app:srcCompat="@drawable/star_red" />
+
+        <TextView
+            android:id="@+id/tv_show_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_show_2"
+            app:layout_constraintStart_toEndOf="@+id/iv_star_ico_3"
+            app:layout_constraintTop_toTopOf="@+id/tv_show_2" />
+
+        <View
+            android:id="@+id/view_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintTop_toBottomOf="@+id/iv_photo_bg" />
+
+        <com.example.forrestsu.logintest.my_controls.TwoTextViewsControl
+            android:id="@+id/my_control_level"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/view_line_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_1" />
+
+        <View
+            android:id="@+id/view_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_1" />
+
+        <com.example.forrestsu.logintest.my_controls.TwoTextViewsControl
+            android:id="@+id/my_control_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/view_line_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_2" />
+
+        <View
+            android:id="@+id/view_line_3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_2" />
+
+        <com.example.forrestsu.logintest.my_controls.TwoTextViewsControl
+            android:id="@+id/my_control_price"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/view_line_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_3" />
+
+        <View
+            android:id="@+id/view_line_4"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_3" />
+
+        <com.example.forrestsu.logintest.my_controls.TwoTextViewsControl
+            android:id="@+id/my_control_note"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_4"
+            twoTextViews:content_text_size="14" />
+
+        <Button
+            android:id="@+id/bt_leave_message"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/edit_bg_round_outlined"
+            android:text="@string/leave_message"
+            android:textColor="@color/blue_5fc0cd"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bt_call"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/bt_call"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/edit_bg_round"
+            android:text="@string/telephone_contact"
+            android:textColor="@color/white_ffffff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bt_leave_message" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_glass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/glass"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <com.example.forrestsu.logintest.my_controls.LeaveMessage
+        android:id="@+id/my_control_leave_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

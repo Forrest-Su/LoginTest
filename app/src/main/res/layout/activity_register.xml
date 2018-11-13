@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_eff0f4"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/title_bg" />
+
+    <Button
+        android:id="@+id/button_close"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#00000000"
+        android:text="@string/button_close"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_title"
+        app:layout_constraintTop_toTopOf="@+id/iv_title" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#00000000"
+        android:gravity="center"
+        android:text="@string/tv_register"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_login"
+        app:layout_constraintStart_toEndOf="@+id/button_close"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#00000000"
+        android:text="@string/button_login_1"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_title" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <ImageView
+        android:id="@+id/iv_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title"
+        app:srcCompat="@drawable/phone_number_bg" />
+
+    <ImageView
+        android:id="@+id/iv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_phone_number"
+        app:srcCompat="@drawable/password_bg" />
+
+    <ImageView
+        android:id="@+id/iv_verification"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_password"
+        app:srcCompat="@drawable/verification_bg" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/button_register"
+        android:gravity="center"
+        android:text="@string/button_register"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_verification" />
+
+    <ImageView
+        android:id="@+id/iv_phone_ico"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="17dp"
+        android:scaleType="fitStart"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/iv_phone_number"
+        app:srcCompat="@drawable/phone" />
+
+    <ImageView
+        android:id="@+id/iv_line_1"
+        android:layout_width="10dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="@+id/iv_phone_number"
+        app:layout_constraintTop_toTopOf="@+id/iv_phone_number"
+        app:srcCompat="@drawable/line_1" />
+
+    <ImageView
+        android:id="@+id/iv_password_ico"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="17dp"
+        android:scaleType="fitStart"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/iv_password"
+        app:srcCompat="@drawable/locked" />
+
+    <ImageView
+        android:id="@+id/iv_line_2"
+        android:layout_width="10dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_password"
+        app:srcCompat="@drawable/line_2" />
+
+    <ImageView
+        android:id="@+id/iv_line_3"
+        android:layout_width="10dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="@+id/iv_verification"
+        app:layout_constraintTop_toTopOf="@+id/iv_verification"
+        app:srcCompat="@drawable/line_3" />
+
+    <ImageView
+        android:id="@+id/iv_verification_ico_1"
+        android:layout_width="20dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/iv_verification"
+        app:srcCompat="@drawable/verification_1" />
+
+    <ImageView
+        android:id="@+id/iv_verification_ico_2"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/iv_verification_ico_1"
+        app:srcCompat="@drawable/verification_2" />
+
+    <Button
+        android:id="@+id/button_verification"
+        android:layout_width="114dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/verification_code_bg"
+        android:text="@string/button_verification"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/iv_verification" />
+
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#00000000"
+        android:hint="@string/et_phone_hint"
+        android:ems="11"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/iv_phone_number"
+        app:layout_constraintStart_toEndOf="@+id/iv_line_1"
+        app:layout_constraintTop_toTopOf="@+id/iv_phone_number" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#00000000"
+        android:hint="@string/et_password_hint"
+        android:ems="13"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/iv_password"
+        app:layout_constraintStart_toEndOf="@+id/iv_line_2"
+        app:layout_constraintTop_toTopOf="@+id/iv_password" />
+
+    <EditText
+        android:id="@+id/et_verification"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#00000000"
+        android:ems="6"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/button_verification"
+        app:layout_constraintStart_toEndOf="@+id/iv_line_3"
+        app:layout_constraintTop_toTopOf="@+id/iv_verification" />
+
+</android.support.constraint.ConstraintLayout>

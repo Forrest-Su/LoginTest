@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_ffffff"
+    android:fitsSystemWindows="true">
+
+    <!--底层-->
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:workerbar="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_ffffff"
+        android:fitsSystemWindows="true"
+        tools:context=".activity.WorkerPostActivity">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view_top"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:background="@color/blue_5fc0cd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/find_employer"
+                android:textSize="18sp"
+                android:textColor="@color/white_ffffff"
+                app:layout_constraintStart_toStartOf="@+id/view_top"
+                app:layout_constraintEnd_toEndOf="@+id/view_top"
+                app:layout_constraintTop_toTopOf="@+id/view_top"
+                app:layout_constraintBottom_toBottomOf="@+id/view_top" />
+
+            <ImageView
+                android:id="@+id/iv_photo_bg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_top"
+                app:srcCompat="@drawable/bg_me_info" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_photo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_photo_bg"
+                app:layout_constraintEnd_toEndOf="@+id/iv_photo_bg"
+                app:layout_constraintStart_toStartOf="@+id/iv_photo_bg"
+                app:layout_constraintTop_toTopOf="@+id/iv_photo_bg" />
+
+            <TextView
+                android:id="@+id/tv_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/take_photo"
+                android:textColor="@color/black_000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/civ_photo"
+                app:layout_constraintStart_toStartOf="@+id/civ_photo"
+                app:layout_constraintTop_toBottomOf="@+id/civ_photo" />
+
+            <TextView
+                android:id="@+id/tv_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:text="@string/basic_information"
+                android:textColor="@color/black_000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_photo_bg" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical"
+                android:text="@string/name"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_information"
+                app:layout_constraintTop_toBottomOf="@+id/tv_information" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|end"
+                android:background="@color/white_ffffff"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+                app:layout_constraintStart_toEndOf="@+id/tv_name"
+                app:layout_constraintTop_toTopOf="@+id/tv_name"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view_line_1"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey_bababa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"/>
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:text="@string/workerAge"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/view_line_1"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/white_ffffff"
+                android:gravity="center_vertical|end"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_age"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_age"
+                app:layout_constraintTop_toTopOf="@+id/tv_age" />
+
+            <View
+                android:id="@+id/view_line_2"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey_bababa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_age"/>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:text="@string/address_now"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/view_line_2"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_show_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical|end"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="@+id/tv_address"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_address"
+                app:layout_constraintStart_toEndOf="@+id/tv_address"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view_line_3"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey_bababa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address"/>
+
+            <TextView
+                android:id="@+id/tv_specific_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/specific_address"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_line_3" />
+
+            <EditText
+                android:id="@+id/et_specific_address"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="top"
+                android:background="@drawable/bg_border"
+                android:maxLines="3"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_specific_address"
+                app:layout_constraintTop_toTopOf="@+id/tv_specific_address" />
+
+            <View
+                android:id="@+id/view_line_4"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey_bababa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_specific_address"/>
+
+            <TextView
+                android:id="@+id/tv_skills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:text="@string/skills"
+                android:textSize="16sp"
+                android:textColor="@color/black_000000"
+                app:layout_constraintTop_toBottomOf="@+id/view_line_4"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.example.forrestsu.logintest.my_controls.WorkerBar
+                android:id="@+id/bar_level"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_skills"
+                workerbar:button_1_text="普通护工"
+                workerbar:button_2_text="高级护工"
+                workerbar:button_3_text="护士"
+                workerbar:title_text="级别" />
+
+            <com.example.forrestsu.logintest.my_controls.WorkerBar
+                android:id="@+id/bar_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bar_level"
+                workerbar:button_1_text="全天"
+                workerbar:button_2_text="白班"
+                workerbar:button_3_text="夜班"
+                workerbar:title_text="工作时间" />
+
+            <com.example.forrestsu.logintest.my_controls.WorkerBar
+                android:id="@+id/bar_meal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bar_time"
+                workerbar:button_1_text="不限"
+                workerbar:button_2_text="是"
+                workerbar:button_3_text="否"
+                workerbar:title_text="是否含餐" />
+
+            <com.example.forrestsu.logintest.my_controls.WorkerBar
+                android:id="@+id/bar_accommodation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bar_meal"
+                workerbar:button_1_text="不限"
+                workerbar:button_2_text="是"
+                workerbar:button_3_text="否"
+                workerbar:title_text="是否住宿" />
+
+            <com.example.forrestsu.logintest.my_controls.WorkerBar
+                android:id="@+id/bar_work_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bar_accommodation"
+                workerbar:button_1_text="不限"
+                workerbar:button_2_text="医院"
+                workerbar:button_3_text="居家"
+                workerbar:title_text="工作地点" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/price_service"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bar_work_location" />
+
+            <EditText
+                android:id="@+id/et_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="2dp"
+                android:background="@color/white_ffffff"
+                android:gravity="center_vertical|end"
+                android:inputType="number"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+                app:layout_constraintEnd_toStartOf="@+id/tv_price_unit"
+                app:layout_constraintStart_toEndOf="@+id/tv_price"
+                app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+            <TextView
+                android:id="@+id/tv_price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical|start"
+                android:textColor="@color/grey_bababa"
+                android:text="@string/price_unit"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="@+id/et_price"
+                app:layout_constraintBottom_toBottomOf="@+id/et_price"
+                app:layout_constraintStart_toEndOf="@+id/et_price"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_self_introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/self_introduction"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+            <EditText
+                android:id="@+id/et_self_introduction"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="top"
+                android:background="@drawable/bg_border"
+                android:maxLines="4"
+                android:textColor="@color/grey_bababa"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_self_introduction"
+                app:layout_constraintTop_toTopOf="@+id/tv_self_introduction" />
+
+            <Button
+                android:id="@+id/bt_confirm"
+                android:layout_width="318dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/blue_5fc0cd"
+                android:text="@string/confirm_post"
+                android:textColor="@color/white_ffffff"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_self_introduction" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <!--中间层（透明）-->
+    <View
+        android:id="@+id/view_glass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/glass" />
+
+    <!--最上层-->
+    <FrameLayout
+        android:id="@+id/fl_show_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+    </FrameLayout>
+
+
+</FrameLayout>

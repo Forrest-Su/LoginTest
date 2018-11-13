@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_ffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/view_top_me"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:background="@color/blue_5fc0cd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_top_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/me"
+        android:textSize="18sp"
+        android:textColor="@color/white_ffffff"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/view_top_me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_top_me" />
+
+
+    <ImageView
+        android:id="@+id/iv_bg_me"
+        android:layout_width="wrap_content"
+        android:layout_height="174dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_me"
+        app:srcCompat="@drawable/bg_me_info" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_default_head"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bg_me"
+        app:layout_constraintStart_toStartOf="@+id/iv_bg_me"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_me"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_me"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/nickname"
+        android:textColor="@color/black_000000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/civ_head"
+        app:layout_constraintStart_toStartOf="@+id/civ_head"
+        app:layout_constraintTop_toBottomOf="@+id/civ_head" />
+
+
+    <!--我的招聘求职信息-->
+    <View
+        android:id="@+id/view_my_post"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/white_ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/iv_bg_me"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_my_post"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_my_post"
+        app:layout_constraintStart_toStartOf="@+id/view_my_post"
+        app:layout_constraintTop_toTopOf="@+id/view_my_post"
+        app:srcCompat="@drawable/my_post" />
+
+    <TextView
+        android:id="@+id/tv_my_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/me_my_post"
+        android:textColor="@color/black_000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_my_post"
+        app:layout_constraintStart_toEndOf="@+id/iv_my_post"
+        app:layout_constraintTop_toTopOf="@+id/iv_my_post"  />
+
+    <View
+        android:id="@+id/view_line_1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintTop_toBottomOf="@+id/view_my_post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--我的资料-->
+    <View
+        android:id="@+id/view_my_info"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/white_ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line_1" />
+
+    <ImageView
+        android:id="@+id/iv_my_info"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@+id/view_my_info"
+        app:layout_constraintTop_toTopOf="@+id/view_my_info"
+        app:layout_constraintBottom_toBottomOf="@id/view_my_info"
+        app:srcCompat="@drawable/my_info"/>
+
+    <TextView
+        android:id="@+id/tv_my_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/me_my_info"
+        android:textSize="16sp"
+        android:textColor="@color/black_000000"
+        app:layout_constraintStart_toEndOf="@+id/iv_my_info"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_my_info"/>
+
+    <View
+        android:id="@+id/view_line_2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_my_info"/>
+
+    <!--设置-->
+    <View
+        android:id="@+id/view_setting"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/white_ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line_2" />
+
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@+id/view_setting"
+        app:layout_constraintTop_toTopOf="@+id/view_setting"
+        app:layout_constraintBottom_toBottomOf="@+id/view_setting"
+        app:srcCompat="@drawable/setting"/>
+
+    <TextView
+        android:id="@+id/tv_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/me_setting"
+        android:textSize="16sp"
+        android:textColor="@color/black_000000"
+        app:layout_constraintStart_toEndOf="@+id/iv_setting"
+        app:layout_constraintTop_toTopOf="@+id/iv_setting"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_setting"/>
+
+    <View
+        android:id="@+id/view_line_3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_setting"/>
+
+    <!--反馈-->
+    <View
+        android:id="@+id/view_feedback"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/white_ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line_3"/>
+
+    <ImageView
+        android:id="@+id/iv_feedback"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@+id/view_feedback"
+        app:layout_constraintTop_toTopOf="@+id/view_feedback"
+        app:layout_constraintBottom_toBottomOf="@+id/view_feedback"
+        app:srcCompat="@drawable/feedback"/>
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/me_feedback"
+        android:textSize="16sp"
+        android:textColor="@color/black_000000"
+        app:layout_constraintStart_toEndOf="@+id/iv_feedback"
+        app:layout_constraintTop_toTopOf="@+id/iv_feedback"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_feedback"/>
+
+    <View
+        android:id="@+id/view_line_4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_feedback"/>
+
+    <!--关于我们-->
+    <View
+        android:id="@+id/view_about"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/white_ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_line_4"/>
+
+    <ImageView
+        android:id="@+id/iv_about"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@+id/view_about"
+        app:layout_constraintTop_toTopOf="@+id/view_about"
+        app:layout_constraintBottom_toBottomOf="@+id/view_about"
+        app:srcCompat="@drawable/about"/>
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/me_about"
+        android:textSize="16sp"
+        android:textColor="@color/black_000000"
+        app:layout_constraintStart_toEndOf="@+id/iv_about"
+        app:layout_constraintTop_toTopOf="@+id/iv_about"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_about"/>
+
+    <View
+        android:id="@+id/view_line_5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+         android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/grey_bababa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_about"/>
+
+
+</android.support.constraint.ConstraintLayout>

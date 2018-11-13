@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="workerBar">
+        <attr name="title_text" format="string" />
+        <attr name="button_1_text" format="string" />
+        <attr name="button_2_text" format="string" />
+        <attr name="button_3_text" format="string" />
+
+        <attr name="text_unSelected_color" format="color" />
+        <attr name="text_selected_color" format="color" />
+
+        <attr name="text_unSelected_bg_color" format="color" />
+        <attr name="text_selected_bg_color" format="color" />
+
+    </declare-styleable>
+
+    <declare-styleable name="twoTextViews" >
+        <attr name="title_text_1" format="string" />
+        <attr name="content_text" format="string" />
+
+        <attr name="title_text_color" format="color" />
+        <attr name="content_text_color" format="color" />
+
+        <attr name="title_text_size" format="dimension" />
+        <attr name="content_text_size" format="integer" />
+    </declare-styleable>
+
+</resources>

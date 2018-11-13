@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_ffffff"
+    android:fitsSystemWindows="true">
+
+    <!--FrameLayout最底层（内容层）-->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_top_myinfo"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:background="@color/blue_5fc0cd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fl_container" />
+
+        <TextView
+            android:id="@+id/tv_top_myinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/me_my_info"
+            android:textColor="@color/white_ffffff"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_top_myinfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view_top_myinfo" />
+
+
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="6dp"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/white_ffffff"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_top_myinfo"
+            app:layout_constraintEnd_toEndOf="@+id/view_top_myinfo"
+            app:layout_constraintTop_toTopOf="@+id/view_top_myinfo" />
+
+        <ImageView
+            android:id="@+id/iv_bg_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_top_myinfo"
+            app:srcCompat="@drawable/bg_me_info" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="26dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add_head"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_bg_me"
+            app:layout_constraintEnd_toEndOf="@+id/iv_bg_me"
+            app:layout_constraintStart_toStartOf="@+id/iv_bg_me"
+            app:layout_constraintTop_toTopOf="@+id/iv_bg_me" />
+
+        <TextView
+            android:id="@+id/tv_change_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:text="@string/change_head"
+            android:textColor="@color/black_000000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/civ_head"
+            app:layout_constraintStart_toStartOf="@+id/civ_head"
+            app:layout_constraintTop_toBottomOf="@+id/civ_head" />
+
+        <!--称呼-->
+        <View
+            android:id="@+id/view_name"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@color/white_ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_bg_me"
+            tools:layout_editor_absoluteY="519dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/nickname"
+            android:textColor="@color/black_000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_name"
+            app:layout_constraintStart_toStartOf="@+id/view_name"
+            app:layout_constraintTop_toTopOf="@+id/view_name" />
+
+        <EditText
+            android:id="@+id/et_nickname"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:hint="@string/please_enter"
+            android:textColor="@color/grey_bababa"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_name"
+            app:layout_constraintEnd_toEndOf="@+id/view_name"
+            app:layout_constraintTop_toTopOf="@+id/view_name" />
+
+        <View
+            android:id="@+id/view_line_1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintEnd_toEndOf="@+id/view_name"
+            app:layout_constraintStart_toStartOf="@+id/view_name"
+            app:layout_constraintTop_toBottomOf="@+id/view_name" />
+
+        <!--生日-->
+        <View
+            android:id="@+id/view_birthday"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@color/white_ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_1" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/birthday"
+            android:textColor="@color/black_000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_birthday"
+            app:layout_constraintStart_toStartOf="@+id/view_birthday"
+            app:layout_constraintTop_toTopOf="@+id/view_birthday" />
+
+        <TextView
+            android:id="@+id/et_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:gravity="end"
+
+            android:textColor="@color/grey_bababa"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_birthday"
+            app:layout_constraintEnd_toEndOf="@+id/view_birthday"
+            app:layout_constraintTop_toTopOf="@+id/view_birthday" />
+
+        <View
+            android:id="@+id/view_line_2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintEnd_toEndOf="@+id/view_birthday"
+            app:layout_constraintStart_toStartOf="@+id/view_birthday"
+            app:layout_constraintTop_toBottomOf="@+id/view_birthday" />
+
+        <!--性别-->
+        <View
+            android:id="@+id/view_sex"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@color/white_ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_2" />
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/sex"
+            android:textColor="@color/black_000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_sex"
+            app:layout_constraintStart_toStartOf="@+id/view_sex"
+            app:layout_constraintTop_toTopOf="@+id/view_sex" />
+
+        <TextView
+            android:id="@+id/tv_show_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:gravity="end"
+            android:text="测试"
+            android:textColor="@color/grey_bababa"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_sex"
+            app:layout_constraintEnd_toEndOf="@+id/view_sex"
+            app:layout_constraintTop_toTopOf="@+id/view_sex" />
+
+        <View
+            android:id="@+id/view_line_3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintEnd_toEndOf="@+id/view_sex"
+            app:layout_constraintStart_toStartOf="@+id/view_sex"
+            app:layout_constraintTop_toBottomOf="@+id/view_sex" />
+
+        <!--现居所在地-->
+        <View
+            android:id="@+id/view_area"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@color/white_ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_3" />
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/area"
+            android:textColor="@color/black_000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_area"
+            app:layout_constraintStart_toStartOf="@+id/view_area"
+            app:layout_constraintTop_toTopOf="@+id/view_area" />
+
+        <TextView
+            android:id="@+id/tv_show_area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/grey_bababa"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_area"
+            app:layout_constraintEnd_toEndOf="@+id/view_area"
+            app:layout_constraintStart_toEndOf="@+id/tv_area"
+            app:layout_constraintTop_toTopOf="@+id/view_area" />
+
+        <View
+            android:id="@+id/view_line_4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/grey_bababa"
+            app:layout_constraintEnd_toEndOf="@+id/view_area"
+            app:layout_constraintStart_toStartOf="@+id/view_area"
+            app:layout_constraintTop_toBottomOf="@+id/view_area" />
+
+        <!--详细地址-->
+        <View
+            android:id="@+id/view_specific_address"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:background="@color/white_ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line_4" />
+
+        <TextView
+            android:id="@+id/tv_specific_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/specific_address"
+            android:textColor="@color/black_000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/view_specific_address"
+            app:layout_constraintTop_toTopOf="@+id/view_specific_address" />
+        
+        <EditText
+            android:id="@+id/et_specific_address"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:gravity="top"
+            android:background="@color/transparent"
+            android:maxLines="3"
+            android:hint="@string/please_enter"
+            android:textSize="16sp"
+            android:textColor="@color/grey_bababa"
+            app:layout_constraintTop_toTopOf="@+id/view_specific_address"
+            app:layout_constraintBottom_toBottomOf="@+id/view_specific_address"
+            app:layout_constraintStart_toEndOf="@+id/tv_specific_address"
+            app:layout_constraintEnd_toEndOf="@+id/view_specific_address"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!--FrameLayout中间层（半透明层）-->
+    <View
+        android:id="@+id/view_glass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/glass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--最上层（Show Fragment）-->
+    <FrameLayout
+        android:id="@+id/fl_show_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_choosePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white_ffffff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_choosePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white_a0ffffff"
+            android:gravity="center"
+            android:text="从相册选择"
+            android:textColor="@color/black_000000"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/view_line_7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/grey_bababa"/>
+
+        <TextView
+            android:id="@+id/tv_takePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white_a0ffffff"
+            android:gravity="center"
+            android:text="拍摄照片"
+            android:textColor="@color/black_000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+
+</FrameLayout>

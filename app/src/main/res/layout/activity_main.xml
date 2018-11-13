@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/show_fragment_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_explore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white_eff0f4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/view_me"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"
+        app:layout_constraintStart_toEndOf="@+id/view_explore" />
+
+    <ImageView
+        android:id="@+id/iv_home"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/view_home"
+        app:layout_constraintStart_toStartOf="@+id/view_home"
+        app:layout_constraintTop_toTopOf="@+id/view_home"
+        app:srcCompat="@drawable/home_outlined" />
+
+    <TextView
+        android:id="@+id/tv_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        android:textColor="@color/grey_bababa"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_home"
+        app:layout_constraintStart_toStartOf="@+id/iv_home"
+        app:layout_constraintTop_toBottomOf="@+id/iv_home" />
+
+    <View
+        android:id="@+id/view_explore"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_explore"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/view_explore"
+        app:layout_constraintStart_toStartOf="@+id/view_explore"
+        app:layout_constraintTop_toTopOf="@+id/view_explore"
+        app:srcCompat="@drawable/explore_outlined" />
+
+    <TextView
+        android:id="@+id/tv_explore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/explore"
+        android:textColor="@color/grey_bababa"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_explore"
+        app:layout_constraintStart_toStartOf="@+id/iv_explore"
+        app:layout_constraintTop_toBottomOf="@+id/iv_explore" />
+
+    <View
+        android:id="@+id/view_home"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/view_explore" />
+
+    <ImageView
+        android:id="@+id/iv_me"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/view_me"
+        app:layout_constraintStart_toStartOf="@+id/view_me"
+        app:layout_constraintTop_toTopOf="@+id/view_me"
+        app:srcCompat="@drawable/me_outlined" />
+
+    <TextView
+        android:id="@+id/tv_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/me"
+        android:textColor="@color/grey_bababa"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_me"
+        app:layout_constraintStart_toStartOf="@+id/iv_me"
+        app:layout_constraintTop_toBottomOf="@+id/iv_me" />
+
+</android.support.constraint.ConstraintLayout>
